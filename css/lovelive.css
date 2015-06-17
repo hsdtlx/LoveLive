@@ -1,3 +1,10 @@
+.bgm{
+	/*display: none;*/
+	width: 0px;
+	height: 0px;
+	float: left;
+}
+
 .start{
 	margin-top: 200px;
 	display: inline !important;
@@ -35,8 +42,23 @@
 }
 
 .pic100{
-	background: url(../images/01.jpg) 50%;
+	background: url(../images/07.jpg) 50%;
 	background-size:100% 100%;
+}
+
+.about{
+	margin-right: 5%;
+	float: right;
+	height: 100%;
+	width: 500px;
+	background-color: #fff;
+	opacity:0.8;
+}
+
+.abouttext{
+	width: 70%;
+	margin: 15%;
+	text-align: left;
 }
 
 .pic201{
@@ -101,4 +123,13 @@
 
 .text2{
 	color: blue;
+}
+
+.pjt11{
+	height: 100%;
+	width: 100%;
+	display: none;
+	background: url(../images/01.jpg) 50%;
+	background-size:100% 100%;
+	float: left;
 }
