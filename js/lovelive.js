@@ -33,9 +33,9 @@ $(function(){
 
 	$('.start0').fadeOut(2000,picfadein);
 
-	$('.crc10').click(function(){
-		$('.crc11').fadeToggle(500);
-		$('.crc12').fadeToggle(500);
+	$('.crc').click(function(){
+		$(this).children(".crcc0").fadeToggle(500);
+		$(this).children(".crcc1").fadeToggle(500);
 	});
 	$('.crc20').click(function(){
 		$('.crc21').fadeToggle(500);
