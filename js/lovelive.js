@@ -37,38 +37,7 @@ $(function(){
 		$(this).children(".crcc0").fadeToggle(500);
 		$(this).children(".crcc1").fadeToggle(500);
 	});
-	$('.crc20').click(function(){
-		$('.crc21').fadeToggle(500);
-		$('.crc22').fadeToggle(500);
-	});
-	$('.crc30').click(function(){
-		$('.crc31').fadeToggle(500);
-		$('.crc32').fadeToggle(500);
-	});
-	$('.crc40').click(function(){
-		$('.crc41').fadeToggle(500);
-		$('.crc42').fadeToggle(500);
-	});
-	$('.crc50').click(function(){
-		$('.crc51').fadeToggle(500);
-		$('.crc52').fadeToggle(500);
-	});
-	$('.crc60').click(function(){
-		$('.crc61').fadeToggle(500);
-		$('.crc62').fadeToggle(500);
-	});
-	$('.crc70').click(function(){
-		$('.crc71').fadeToggle(500);
-		$('.crc72').fadeToggle(500);
-	});
-	$('.crc80').click(function(){
-		$('.crc81').fadeToggle(500);
-		$('.crc82').fadeToggle(500);
-	});
-	$('.crc90').click(function(){
-		$('.crc91').fadeToggle(500);
-		$('.crc92').fadeToggle(500);
-	});
+	
 
 });
 

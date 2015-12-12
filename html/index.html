@@ -3,25 +3,26 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	<title>lovelive</title>
 	<link rel="stylesheet" href="../css/jquery.fullPage.css">
+	<link rel="stylesheet/less" type="text/css" href="../css/lovelive.less" />
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+
 
 	<script type="text/javascript" src='../js/jquery.js'></script>
 	<script type="text/javascript" src='../js/bootstrap.js'></script>
 	<script type="text/javascript" src='../js/jquery.fullPage.min.js'></script>
 	<script type="text/javascript" src='../js/lovelive.js'></script>
 	<script type="text/javascript" src='../js/angular.js'></script>
+	<script type="text/javascript" src='../js/less.min.js'></script>
 	<script type="text/javascript" src='../js/data.js'></script>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../css/lovelive.css" />
-
 </head>
 <body ng-app="LLapp" ng-controller="LLCtrl"> 
 	<audio src="bgm.mp3" loop="loop" autoplay="autoplay"></audio>
 	<div id="dowebok">
 	<div class="section">
-		<div class="pic000"></div>
+		<div class="{{opening.classname}}"></div>
 		<div class="start0">
 			<p class="start1">{{opening.title[0]}}</p>
-			<p class="start2">{{}}</p>opening.title[1]
+			<p class="start2">{{opening.title[1]}}</p>
 		</div>
 	</div>
 	<div class="section">	
@@ -47,227 +48,36 @@
 	</div>
 	<div class="section">
 		<div class="slide frontpage">
-			<p>{{memberInfo.title}}</p>
-			<p class="small">{{memberInfo.info}}</p>
+			<p>{{memberTotal.title}}</p>
+			<p class="small">{{memberTotal.info}}</p>
 		</div>
-		<div class="slide pic201">
+		<div class="slide" ng-repeat="x in memberInfo">
+			<div class="{{x[0]}}">
 			<div class="pic2div crc">
 				<div class="text1 crcc0">
-					<strong>
-						{{memberInfo.hnk[0]}}
-					</strong>
-					<p>
-						{{memberInfo.hnk[1]}}
-					</p>
-					<p>
-						{{memberInfo.hnk[2]}}
-					</p> 
-					<p class="text2">
-						{{memberInfo.hnk[3]}}
-					</p>				
+					<strong>{{x[2]}}</strong>
+					<p>{{x[3]}}</p>
+					<p>{{x[4]}}</p> 
+					<p class="text2">{{x[5]}}</p>
 				</div>
 				<div class="text crcc1">
-					<div class="cv1"></div>
+					<div class="{{x[1]}}"></div>
 					<div class="text1">
-						<strong>{{memberInfo.emi[0]}}</strong>
-						<p>{{memberInfo.emi[1]}}</p>
+						<strong>{{x[6]}}</strong>
+						<p>{{x[7]}}</p>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="slide pic202">
-			<div class="pic2div crc20">
-				<div class="text1 crc21">
-					<strong>
-						{{memberInfo.umi[0]}}
-					</strong>
-					<p>
-						{{memberInfo.umi[1]}}
-					</p>
-					<p class="text2">
-						{{memberInfo.umi[2]}}
-					</p>
-				</div>
-				<div class="text crc22">
-					<div class="cv2"></div>
-					<div class="text1">
-						<strong>{{memberInfo.mmr[0]}}</strong>
-						<p>
-							{{memberInfo.mmr[1]}}
-						</p>
-					</div>
-				</div>
 			</div>
 		</div>
-		<div class="slide pic203">
-			<div class="pic2div crc30">
-				<div class="text1 crc31">
-					<strong>
-						{{memberInfo.kotori[0]}}
-					</strong>
-					<p>
-						{{memberInfo.kotori[1]}}
-					</p>
-					<p class="text2">
-						{{memberInfo.kotori[2]}}
-					</p>
-				</div>
-				<div class="text crc32">
-					<div class="cv3"></div>
-					<div class="text1">
-						<strong>{{memberInfo.uchi[0]}}</strong>
-						<p>
-							{{memberInfo.uchi[1]}}
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="slide pic204">
-			<div class="pic2div crc40">
-				<div class="text1 crc41">
-					<strong>
-						{{memberInfo.hanayo[0]}}
-					</strong>
-					<p>
-						{{memberInfo.hanayo[1]}}
-					</p>
-					<p class="text2">
-						{{memberInfo.hanayo[2]}}
-					</p>
-				</div>
-				<div class="text crc42">
-					<div class="cv4"></div>
-					<div class="text1">
-						<strong>{{memberInfo.chikako[0]}}</strong>
-						<p>
-							{{memberInfo.chikako[1]}}
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="slide pic205">
-			<div class="pic2div crc50">
-				<div class="text1 crc51">
-					<strong>
-						{{memberInfo.rin[0]}}
-					</strong>
-					<p>
-						{{memberInfo.rin[1]}}
-					</p>
-					<p class="text2">
-						{{memberInfo.rin[2]}}
-					</p>
-				</div>
-				<div class="text crc52">
-					<div class="cv5"></div>
-					<div class="text1">
-						<strong>{{memberInfo.rippi[0]}}</strong>
-						<p>
-							{{memberInfo.rippi[1]}}
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="slide pic206">
-			<div class="pic2div crc60">
-				<div class="text1 crc61">
-					<strong>
-						{{memberInfo.maki[0]}}
-					</strong>
-					<p>
-						{{memberInfo.maki[1]}}
-					</p>
-					<p class="text2">
-						{{memberInfo.maki[2]}}
-					</p>
-				</div>
-				<div class="text crc62">
-					<div class="cv6"></div>
-					<div class="text1">
-						<strong>{{memberInfo.pile[0]}}</strong>
-						<p>
-							{{memberInfo.pile[1]}}
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="slide pic207">
-			<div class="pic2div crc70">
-				<div class="text1 crc71">
-					<strong>
-						{{memberInfo.nico[0]}}
-					</strong>
-					<p>
-						{{memberInfo.nico[1]}}
-					</p>
-					<p class="text2">
-						{{memberInfo.nico[2]}}
-					</p>
-				</div>
-				<div class="text crc72">
-					<div class="cv7"></div>
-					<div class="text1">
-						<strong>{{memberInfo.srmr[0]}}</strong>
-						<p>
-							{{memberInfo.srmr[1]}}
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="slide pic208">
-			<div class="pic2div crc80">
-				<div class="text1 crc81">
-					<strong>
-						{{memberInfo.eri[0]}}
-					</strong>
-					<p>
-						{{memberInfo.eri[1]}}
-					</p>
-					<p class="text2">
-						{{memberInfo.eri[2]}}
-					</p>
-				</div>
-				<div class="text crc82">
-					<div class="cv8"></div>
-					<div class="text1">
-					<strong>{{memberInfo.nanjo[0]}}</strong>
-					<p>
-						{{memberInfo.nanjo[1]}}
-					</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="slide pic209">
-			<div class="pic2div crc90">
-				<div class="text1 crc91">
-					<strong>
-						{{memberInfo.nozomi[0]}}
-					</strong>
-					<p>
-						{{memberInfo.nozomi[1]}}
-					</p>
-					<p class="text2">
-						{{memberInfo.nozomi[2]}}
-					</p>
-				</div>
-				<div class="text crc92">
-					<div class="cv9"></div>
-					<div class="text1">
-					<strong>{{memberInfo.ksd[0]}}</strong>
-					<p>
-						{{memberInfo.ksd[1]}}
-					</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="slide pic210"></div>
+		<div class="slide"></div>
+		<div class="slide"></div>
+		<div class="slide"></div>
+		<div class="slide"></div>
+		<div class="slide"></div>
+		<div class="slide"></div>
+		<div class="slide"></div>			
+		<div class="slide"></div>		
 	</div>
 	<div class="section">
 		<div class="slide frontpage">{{projects.title}}</div>
@@ -379,6 +189,5 @@
 		</div>
 
 	</div>
-
 </body>
 </html>
